@@ -19,7 +19,7 @@ const calculatePrice = () => {
     const newPrice = parseFloat(price.value);
     const newTip = parseInt(tip.value);
     const newPeople = parseFloat(people.value);
-    const result = Number((newPrice + (newPrice * newTip)) / (newPeople));
+    const result = (newPrice + (newPrice * newTip)) / (newPeople);
     console.log(result);
     costInfo.style.display = "block";
     cost.textContent = result.toFixed(2);
